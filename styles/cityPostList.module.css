@@ -1,0 +1,17 @@
+.city-group-post-list-item-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgrey;
+    padding: 4%;
+}
+
+.city-group-post-list-item-wrapper {
+    padding: 3%;
+    border-radius: 12px;
+    border: 1px solid lightgrey;
+}
+
+.city-group-post-list-item-container img {
+    border-radius: 12px;
+    border: 1px solid lightgrey;
+}

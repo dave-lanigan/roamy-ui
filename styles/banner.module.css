@@ -1,0 +1,46 @@
+.banner-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 3em;
+    padding: 0 0.75em;
+    background-color: white;
+    font-family: 'Nunito', sans-serif;
+    border-bottom: 1px solid 	#F0F0F0;
+    
+    /* position: sticky;
+    top: 0px; */
+  }
+  
+  .logo {
+    height: 3em;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    /* background-color: red; */
+    font-weight: bolder;
+  }
+  
+  .searchbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%
+  }
+  
+  #main-searchbar {
+    border: 0.5px solid lightgrey;
+    border-radius: 5em;
+    padding-left: 1em;
+    width:80%;
+    height: 2em;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  #main-searchbar:hover, #main-searchbar:focus {
+    border: 0.5px solid #009688;
+    border-radius: 5em;
+    width:80%;
+    outline: none;
+  }

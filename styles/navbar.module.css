@@ -1,0 +1,73 @@
+/* https://www.youtube.com/watch?v=amf18mxNX18&ab_channel=Index-Zero */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 3em;
+    padding: 0 2em;
+    background-color: white;
+    /* columns: white; */
+    font-family: 'Nunito', sans-serif;
+    border-top: 1px solid 	#F0F0F0;
+
+    position: sticky;
+    bottom: 0px;
+}
+
+.nav-container a {
+    color: black;
+    margin: 0 2em;
+    text-decoration: none;
+}
+
+.nav-container icon {
+    fill: aqua;
+}
+
+.nav-container a:hover {
+    color: aqua;
+}
+
+.nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: aqua;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.nav-close-btn {
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav-container nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: aquamarine;
+        transition: 1s;
+        transform: translateY(-100vh);
+
+    }
+
+    .nav-container .responsive_nav {
+        transform: none;        
+    }
+}
