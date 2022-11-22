@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: space-evenly;
     height: 3em;
+    width: 100%;
+    padding-top: 3em;
     padding: 0 2em;
     background-color: white;
     /* columns: white; */
@@ -13,7 +15,7 @@
     border-top: 1px solid 	#F0F0F0;
 
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
 }
 
 .nav-container a {

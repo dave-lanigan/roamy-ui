@@ -20,7 +20,7 @@ import CityInfo from '../components/cityInfo'
 
 function CityView(props: any) {
 
-    console.log(props)
+    const [hood, setHood] = React.useState<string>("discover")
 
     if (props.data=="discover") {
         return( <CityStream /> );
@@ -32,7 +32,17 @@ function CityView(props: any) {
         return(<CityPosts city={props.city } />);
     }
     else if (props.data=="map") {
-        return(<div style={{height:"100%"}}><Map /></div>);
+        return(
+        <>
+            <div>
+                <div>Great Neighborhoods</div>
+                <div>
+                   { [ "El Pablado" ] } 
+                </div>
+            </div>
+            <div style={{height: '100%'}}><Map /></div>
+        </>
+    );
     }
 }
 
@@ -72,7 +82,6 @@ function App(props: any) {
             <img className={styles['city-image']} src={city.img} />
             <div className={styles['city-name']} >{ city.name }</div>
             <AiOutlineHeart size={28} />
-            
             <div className={styles['city-nav']}>
                 <div className={styles['city-nav-comps-container']}>
 
@@ -90,7 +99,6 @@ function App(props: any) {
                     </div>
                 </div>
             </div>
-        
         </div>
 
         <div className={styles["content"]}>

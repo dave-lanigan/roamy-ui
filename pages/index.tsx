@@ -13,11 +13,11 @@ export default function Home() {
 
   if (user) {
     return (
-      <div className={styles.container}></div>
+      <div className={styles['base-container']}></div>
     )
   } else {
     return (
-      <div className={styles.container}><CityList /></div>
+      <div className={styles['base-container']}><CityList /></div>
     )
   }
 }
