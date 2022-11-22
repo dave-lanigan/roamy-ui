@@ -5,6 +5,8 @@ import React from 'react'
 import CityList from '../components/cityList'
 import styles from '../styles/Home.module.css'
 
+const api : string = "http://127.0.0.1:8000"
+
 export default function Home() {
 
     const [user, setUser] = React.useState(null)

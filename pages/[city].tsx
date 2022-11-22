@@ -12,6 +12,7 @@ import {RiCompassDiscoverLine} from "react-icons/ri";
 import {AiOutlineHeart} from 'react-icons/ai';
 import {CgCoffee} from 'react-icons/cg';
 import {BsCloudSunFill} from 'react-icons/bs';
+import Map from '../components/cityMap';
 //import {RiQuestionnaireLine}
 
 import CityInfo from '../components/cityInfo'
@@ -31,7 +32,7 @@ function CityView(props: any) {
         return(<CityPosts city={props.city } />);
     }
     else if (props.data=="map") {
-        return(<div>Hey</div>);
+        return(<div style={{height:"100%"}}><Map /></div>);
     }
 }
 
