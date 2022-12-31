@@ -1,0 +1,10 @@
+.stream-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgrey;
+    padding: 4%;
+}
+
+/* .reddit-list-post {
+
+} */

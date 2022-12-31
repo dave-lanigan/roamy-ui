@@ -2,21 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 
 .nav-container {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 3em;
-    width: 100%;
-    padding-top: 3em;
-    padding: 0 2em;
     background-color: white;
-    /* columns: white; */
     font-family: 'Nunito', sans-serif;
     border-top: 1px solid 	#F0F0F0;
+    /* border-bottom: 1px solid 	white; */
 
-    position: fixed;
-    bottom: 0;
 }
+
 
 .nav-container a {
     color: black;
@@ -25,11 +25,11 @@
 }
 
 .nav-container icon {
-    fill: aqua;
+    /* fill: aqua; */
 }
 
 .nav-container a:hover {
-    color: aqua;
+    /* color: aqua; */
 }
 
 .nav-btn {
@@ -41,10 +41,6 @@
     color: aqua;
     visibility: hidden;
     opacity: 0;
-}
-
-.nav-close-btn {
-
 }
 
 @media only screen and (max-width: 1024px) {
