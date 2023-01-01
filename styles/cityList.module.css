@@ -89,3 +89,29 @@
   align-items: center;
   margin-left: 4%;
 }
+
+.searchbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#main-searchbar {
+  border: 0.5px solid lightgrey;
+  border-radius: 5em;
+  padding-left: 1em;
+  width: 80%;
+  height: 2.5em;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+}
+
+#main-searchbar:hover, #main-searchbar:focus {
+  border: 0.5px solid #009688;
+  border-radius: 5em;
+  width: 80%;
+  outline: none;
+}

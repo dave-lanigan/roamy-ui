@@ -1,10 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import { useQuery } from 'react-query';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
+
 import styles from '../styles/cityList.module.css';
+
 import { MdLocalGroceryStore, MdFastfood } from 'react-icons/md';
-import { BsFillHouseDoorFill } from 'react-icons/bs';
 import { IoLanguage } from 'react-icons/io5';
 import {
   AiFillCar,
@@ -131,8 +132,13 @@ function City(props: {data: ICityQuickData}) {
 export default function App() {
 
   const search = useQuery('searchTF')
+  const [query, setQuery] = React.useState("")
 
-  console.log("search", search.data)
+  function SearchBar() {
+    return (
+          <div className={styles['searchbar-container']}> <input id={styles['main-searchbar']} placeholder='search ...' value={query} onChange={event => setQuery(event.target.value)} /> </div>
+    );
+  }
   
   // sort by living cost, flight cost, popularity, current temp
   const {isLoading, data, isError } = useQuery('city-short-data', async () => {
@@ -148,11 +154,18 @@ export default function App() {
 
   if (data) {
     let cityList: any = data.map((city)=>{
-      return( <City key={city.tag} data={ city }/> );
+      if ( city.tag.includes(query) ) {
+        return( <City key={city.tag} data={ city } /> );
+      }
     })
     return(
       <>
-        { search.data? <p>Hi Jim</p> : ""}
+        { search.data ? <div className={styles['searchbar-container']}>
+                          <input id={styles['main-searchbar']}
+                                 placeholder='search ...'
+                                 value={query} onChange={event => setQuery(event.target.value)} />
+                        </div> : ""
+        }
         <div className={styles.cities}>{ cityList }</div>
       </>
     );

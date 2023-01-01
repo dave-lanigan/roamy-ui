@@ -27,34 +27,30 @@ function PlacesList (props: any) {
     const {isLoading, data, isError } = useQuery(`${props.city}-${props.kind}-places`, async () => {
         try {
             let url = `${dataAPI.api}/info/${props.city}/places?kind=${props.kind}`
-          let resp = await fetch(url)
-          let out = await resp.json()
-          return (out)
+            let resp = await fetch(url)
+            let out = await resp.json()
+            return (out)
         } catch (err) {
-          return(err)
+            return(err)
         }
       })
       
     if (data) {
         if ( data.length==0 ) { return( <FailedToLoad /> ); }
-        let cityList: any = data.map((info, index)=>{
-          return(
-              <Place key={index} data={ info }/>
-          );
+        let cityList: any = data.map((info)=>{
+            return( <Place key={info.pid} data={ info }/> );
         })
         return(cityList);
     } else if (isLoading) {
         return( <Loading /> );
     } else {
         return( <FailedToLoad /> );
-    }
+}
 }
 
 
 export default function App(props: any) {
-
     let tag: string = props.city;
-    
     return(
         <div className={styles['city-info-container']}>
             <div className={styles['city-info-item-container']}>
