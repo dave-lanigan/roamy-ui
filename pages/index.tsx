@@ -7,6 +7,8 @@ import dynamic from 'next/dynamic'
 
 export default function Home() {
 
+  const [mobile, setMobile] = React.useState( null )
+
   const getMobileDetect = (userAgent: NavigatorID['userAgent']) => {
     const isAndroid = () => Boolean(userAgent.match(/Android/i))
     const isIos = () => Boolean(userAgent.match(/iPhone|iPad|iPod/i))
@@ -23,27 +25,26 @@ export default function Home() {
       isSSR,
     }
   }
-  const useMobileDetect = () => {
-    useEffect(() => {}, [])
+
+  // const useMobileDetect = () => {
+    
+  //   useEffect(() => {}, [])
+
+  //   const userAgent = typeof navigator === 'undefined' ? 'SSR' : navigator.userAgent
+  //   setMobile(getMobileDetect(userAgent).isMobile())
+  //   console.log(mobile)
+  //   return getMobileDetect(userAgent)
+  // }
+
+  useEffect(() => {
     const userAgent = typeof navigator === 'undefined' ? 'SSR' : navigator.userAgent
-    return getMobileDetect(userAgent)
-  }
-
-  const [user, setUser] = React.useState( null )
-
-  if (user) {
-    return (
-      <div className={styles['base-container']}>
-        This site is mobile only.
-      </div>
-    )
-  } else {
-    const CityList = dynamic(() => import('./cities'))
-    return(
-      <div className={styles['base-container']}>
-        {useMobileDetect().isMobile() ? "" : <p>This site is currently meant for mobile only.</p>}
-        <CityList />
-      </div>
-    )
-  }
+    setMobile(getMobileDetect(userAgent).isMobile())
+  }, [])
+  const CityList = dynamic(() => import('./cities'))
+  return(
+    <div className={styles['base-container']}>
+      { mobile ? "" : <p>This site is currently meant for mobile only.</p>}
+      <CityList />
+    </div>
+  )
 }
