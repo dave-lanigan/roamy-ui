@@ -3,6 +3,7 @@ import React from 'react'
 import CityList from './cities'
 import styles from '../styles/Home.module.css'
 import { useEffect } from 'react'
+import dynamic from 'next/dynamic'
 
 export default function Home() {
 
@@ -27,11 +28,8 @@ export default function Home() {
     const userAgent = typeof navigator === 'undefined' ? 'SSR' : navigator.userAgent
     return getMobileDetect(userAgent)
   }
-  
-  const currentDevice = useMobileDetect()
-  console.log(currentDevice.isMobile())
 
-  const [user, setUser] = React.useState(  !currentDevice.isMobile()  )
+  const [user, setUser] = React.useState( null )
 
   if (user) {
     return (
@@ -40,8 +38,10 @@ export default function Home() {
       </div>
     )
   } else {
+    const CityList = dynamic(() => import('./cities'))
     return(
       <div className={styles['base-container']}>
+        {useMobileDetect().isMobile() ? "" : <p>This site is currently meant for mobile only.</p>}
         <CityList />
       </div>
     )

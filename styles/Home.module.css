@@ -4,6 +4,13 @@
   width: 100%;
 }
 
+/* @media screen and (max-width: 450px) {
+  .base-container {
+    height: 100%;
+    width: 100%;
+  }
+} */
+
 .banner-container {
   display: flex;
   align-items: center;
