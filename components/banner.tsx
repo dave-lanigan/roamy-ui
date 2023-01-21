@@ -9,9 +9,9 @@ function App() {
             <h2>roamsy</h2>
         </div>
 
-        <a href="/login" className={ styles['account-icon'] }>
+        {/* <a href="/login" className={ styles['account-icon'] }>
           <MdAccountCircle size={32}/>
-        </a>
+        </a> */}
     </div>
   );
 }

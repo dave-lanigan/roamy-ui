@@ -26,7 +26,7 @@ function App() {
         <a href="/#"><FaGlobeAmericas size={25}/></a>
         <a href="/#" onClick={clickedSearch}><FaSearch size={25}/></a>
         <a href="/#"><RiCompassDiscoverLine size={29}/></a>
-        <a href="/#"><RiMessage3Fill size={28}/> </a>
+        {/* <a href="/#"><RiMessage3Fill size={28}/> </a> */}
     </div>
   );
 }

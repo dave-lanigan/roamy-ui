@@ -27,30 +27,6 @@
   font-weight: bolder;
 }
 
-.searchbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 85%
-}
-
-#main-searchbar {
-  border: 0.5px solid lightgrey;
-  border-radius: 5em;
-  padding-left: 1em;
-  width:80%;
-  height: 2em;
-  outline: none;
-  font-family: 'Nunito', sans-serif;
-}
-
-#main-searchbar:hover, #main-searchbar:focus {
-  border: 0.5px solid #009688;
-  border-radius: 5em;
-  width:80%;
-  outline: none;
-}
-
 .failed-to-load {
   display: flex;
   justify-content: center;

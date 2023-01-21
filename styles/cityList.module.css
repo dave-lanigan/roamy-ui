@@ -95,8 +95,17 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  line-height: 0;
+  /* background-color: #009688; */
+  transition: all .5s ease-in-out;
+  transform-origin: top;
+  /*transform: scaleY(0); */
+}
+
+.searchbar-container:target {
+  transform: scaleY(1);
 }
 
 #main-searchbar {
