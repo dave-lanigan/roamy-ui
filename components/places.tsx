@@ -14,7 +14,6 @@ interface CityPlace {
 
 interface Props {
     data: CityPlace,
-    city: string,
     key: number
 }
 

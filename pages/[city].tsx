@@ -14,7 +14,6 @@ import {AiOutlineHeart} from 'react-icons/ai'
 import styles from '../styles/city.module.css'
 
 import CityStream from '../components/cityStream'
-import CityPosts from '../components/cityPosts'
 import CityPlaces from '../components/cityPlaces'
 import Map from '../components/cityMap'
 
@@ -31,9 +30,6 @@ function CityView(props: any) {
     }
     else if (props.data=="info") {
         return(<CityPlaces city={props.city } />);
-    } 
-    else if (props.data=="groups") {
-        return(<CityPosts city={props.city } />);
     }
     else if (props.data=="map") {
         return(

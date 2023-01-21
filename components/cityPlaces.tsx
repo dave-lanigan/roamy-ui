@@ -13,14 +13,14 @@ import Loading from './loading'
 import FailedToLoad from './failedToLoad'
 
 
-interface CityPlace {
-    name: string,
-    address: string,
-    img: string,
-    link: string,
-    lat: number,
-    lon: number,
-  }
+// interface CityPlace {
+//     name: string,
+//     address: string,
+//     img: string,
+//     link: string,
+//     lat: number,
+//     lon: number,
+//   }
 
 
 function PlacesList (props: any) {

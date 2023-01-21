@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useQuery, useQueryClient } from 'react-query';
+import Link from 'next/link';
 
 import styles from '../styles/navbar.module.css'
 import {FaGlobeAmericas, FaSearch} from 'react-icons/fa';
@@ -23,9 +24,9 @@ function App() {
 
   return (
     <div className={styles['nav-container']}>
-        <a href="/#"><FaGlobeAmericas size={25}/></a>
-        <a href="/#" onClick={clickedSearch}><FaSearch size={25}/></a>
-        <a href="/#"><RiCompassDiscoverLine size={29}/></a>
+        <Link href="/#"><FaGlobeAmericas size={25}/></Link>
+        <Link href="/#" onClick={clickedSearch}><FaSearch size={25}/></Link>
+        <Link href="/#"><RiCompassDiscoverLine size={29}/></Link>
         {/* <a href="/#"><RiMessage3Fill size={28}/> </a> */}
     </div>
   );
