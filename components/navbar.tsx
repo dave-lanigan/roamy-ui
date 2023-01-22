@@ -25,7 +25,7 @@ function App() {
   return (
     <div className={styles['nav-container']}>
         <Link href="/#"><FaGlobeAmericas size={25}/></Link>
-        <Link href="/#" onClick={clickedSearch}><FaSearch size={25}/></Link>
+        <a href="/#" onClick={clickedSearch}><FaSearch size={25}/></a>
         <Link href="/#"><RiCompassDiscoverLine size={29}/></Link>
         {/* <a href="/#"><RiMessage3Fill size={28}/> </a> */}
     </div>
